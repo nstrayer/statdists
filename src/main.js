@@ -7,6 +7,7 @@ import min from './arrayHelpers/min';
 import scale from './arrayHelpers/scale';
 import vadd from './arrayHelpers/vadd';
 import vsub from './arrayHelpers/vsub';
+import log from './arrayHelpers/log';
 
 module.exports = {
   rnorm,
@@ -18,4 +19,5 @@ module.exports = {
   scale,
   vadd,
   vsub,
+  log,
 };
