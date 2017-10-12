@@ -1,6 +1,6 @@
 {
   "name": "statdists",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A small library for doing some stats in javascipt modeled after R",
   "main": "dist/statdists.js",
   "scripts": {

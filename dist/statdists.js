@@ -206,6 +206,10 @@ var _vsub = __webpack_require__(18);
 
 var _vsub2 = _interopRequireDefault(_vsub);
 
+var _log = __webpack_require__(19);
+
+var _log2 = _interopRequireDefault(_log);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
@@ -217,7 +221,8 @@ module.exports = {
   min: _min2.default,
   scale: _scale2.default,
   vadd: _vadd2.default,
-  vsub: _vsub2.default
+  vsub: _vsub2.default,
+  log: _log2.default
 };
 
 /***/ }),
@@ -638,6 +643,35 @@ exports.default = function (vec1, vec2) {
     return d - vec2[i];
   });
 };
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vals) {
+  return isArray(vals) ? vals.map(function (d) {
+    return Math.log(d);
+  }) : Math.log(vals);
+};
+
+var isArray = Array.isArray;
+
+// @ts-check
+
+// takes a vector or scaler and and returns logged values.
+/**
+ * @param {number[] | number} vals - vector of numbers or single number
+ * @return {number[]| number} - Input log transformed
+ */
+
+;
 
 /***/ })
 /******/ ]);
