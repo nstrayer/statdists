@@ -178,27 +178,31 @@ var _dnorm = __webpack_require__(10);
 
 var _dnorm2 = _interopRequireDefault(_dnorm);
 
-var _mean = __webpack_require__(12);
+var _runif = __webpack_require__(12);
+
+var _runif2 = _interopRequireDefault(_runif);
+
+var _mean = __webpack_require__(13);
 
 var _mean2 = _interopRequireDefault(_mean);
 
-var _max = __webpack_require__(13);
+var _max = __webpack_require__(14);
 
 var _max2 = _interopRequireDefault(_max);
 
-var _min = __webpack_require__(14);
+var _min = __webpack_require__(15);
 
 var _min2 = _interopRequireDefault(_min);
 
-var _scale = __webpack_require__(15);
+var _scale = __webpack_require__(16);
 
 var _scale2 = _interopRequireDefault(_scale);
 
-var _vadd = __webpack_require__(16);
+var _vadd = __webpack_require__(17);
 
 var _vadd2 = _interopRequireDefault(_vadd);
 
-var _vsub = __webpack_require__(17);
+var _vsub = __webpack_require__(18);
 
 var _vsub2 = _interopRequireDefault(_vsub);
 
@@ -207,6 +211,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
   rnorm: _rnorm2.default,
   dnorm: _dnorm2.default,
+  runif: _runif2.default,
   mean: _mean2.default,
   max: _max2.default,
   min: _min2.default,
@@ -494,6 +499,42 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+exports.default = function () {
+  var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var end = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  var range = end - start;
+  var gen = function gen() {
+    return Math.random() * range + start;
+  };
+  return Array.from(new Array(n), function () {
+    return gen();
+  });
+};
+
+; // @ts-check
+// import {randomNormal} from 'd3-random';
+
+// Generates n random uniform values
+/**
+ * @param {number} n - number of samples you want.
+ * @param {number} [start = 0] - low end of range
+ * @param {number} [end = 1] - high end of range
+ * @return {number[]} - array of random uniforms
+ */
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 exports.default = function (vals) {
   var N = vals.length;
   return vals.reduce(function (total, current) {
@@ -502,7 +543,7 @@ exports.default = function (vals) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -525,7 +566,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -548,7 +589,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -565,7 +606,7 @@ exports.default = function (vec, scaler) {
 };
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -582,7 +623,7 @@ exports.default = function (vec1, vec2) {
 };
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
