@@ -1,0 +1,35 @@
+{
+  "name": "arrjs",
+  "version": "0.0.1",
+  "description": "A small library for doing some stats in javascipt modeled after R",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest --watch"
+  },
+  "keywords": [
+    "stats"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nstrayer/arrjs.git"
+  },
+  "author": "Nick Strayer <nick.strayer@gmail.com> (http://nickstrayer.me)",
+  "license": "MIT",
+  "dependencies": {
+    "d3-random": "1.1.0",
+    "lodash": "4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.0",
+    "eslint": "4.8.0",
+    "eslint-config-google": "0.9.1",
+    "jest": "20.0.4",
+    "prettier-eslint": "6.4.2",
+    "webpack": "3.7.1"
+  }
+}
