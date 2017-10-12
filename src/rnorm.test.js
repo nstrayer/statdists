@@ -1,5 +1,5 @@
 import rnorm from './rnorm';
-import mean from './mean';
+import mean from './arrayHelpers/mean';
 
 test('properly returns values of desired length', () => {
   expect(rnorm(10).length).toEqual(10);

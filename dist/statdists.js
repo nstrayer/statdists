@@ -182,12 +182,37 @@ var _mean = __webpack_require__(12);
 
 var _mean2 = _interopRequireDefault(_mean);
 
+var _max = __webpack_require__(13);
+
+var _max2 = _interopRequireDefault(_max);
+
+var _min = __webpack_require__(14);
+
+var _min2 = _interopRequireDefault(_min);
+
+var _scale = __webpack_require__(15);
+
+var _scale2 = _interopRequireDefault(_scale);
+
+var _vadd = __webpack_require__(16);
+
+var _vadd2 = _interopRequireDefault(_vadd);
+
+var _vsub = __webpack_require__(17);
+
+var _vsub2 = _interopRequireDefault(_vsub);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
   rnorm: _rnorm2.default,
   dnorm: _dnorm2.default,
-  mean: _mean2.default
+  mean: _mean2.default,
+  max: _max2.default,
+  min: _min2.default,
+  scale: _scale2.default,
+  vadd: _vadd2.default,
+  vsub: _vsub2.default
 };
 
 /***/ }),
@@ -474,6 +499,103 @@ exports.default = function (vals) {
   return vals.reduce(function (total, current) {
     return total + current / N;
   }, 0);
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vals) {
+  return Math.max.apply(Math, _toConsumableArray(vals));
+};
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @ts-check
+
+// Finds the max of an array of numbers
+/**
+ * @param {number[]} vals - array of numbers
+ * @return {number} - largest value of the array
+ */
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vals) {
+  return Math.min.apply(Math, _toConsumableArray(vals));
+};
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @ts-check
+
+// Finds the minimum of an array of numbers
+/**
+ * @param {number[]} vals - array of numbers
+ * @return {number} - smallest value of the array
+ */
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vec, scaler) {
+  return vec.map(function (d) {
+    return d * scaler;
+  });
+};
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vec1, vec2) {
+  return vec1.map(function (d, i) {
+    return d + vec2[i];
+  });
+};
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (vec1, vec2) {
+  return vec1.map(function (d, i) {
+    return d - vec2[i];
+  });
 };
 
 /***/ })
