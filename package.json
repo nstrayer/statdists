@@ -1,5 +1,5 @@
 {
-  "name": "arrjs",
+  "name": "statdists",
   "version": "0.0.1",
   "description": "A small library for doing some stats in javascipt modeled after R",
   "main": "src/main.js",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nstrayer/arrjs.git"
+    "url": "https://github.com/nstrayer/statdists.git"
   },
   "author": "Nick Strayer <nick.strayer@gmail.com> (http://nickstrayer.me)",
   "license": "MIT",
