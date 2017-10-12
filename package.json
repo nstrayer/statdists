@@ -2,7 +2,7 @@
   "name": "statdists",
   "version": "0.0.1",
   "description": "A small library for doing some stats in javascipt modeled after R",
-  "main": "src/main.js",
+  "main": "dist/statdists.js",
   "scripts": {
     "build": "webpack",
     "test": "jest --watch"

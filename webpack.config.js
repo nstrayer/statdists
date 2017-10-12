@@ -1,9 +1,9 @@
 module.exports = {
   entry: './src/main.js',
   output: {
-    library: 'arrjs',
+    library: 'statdists',
     libraryTarget: 'umd',
-    filename: 'dist/arr.js',
+    filename: 'dist/statdists.js',
   },
   devtool: 'source-map',
   module: {
