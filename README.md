@@ -30,6 +30,7 @@ console.log(someNormals)
 
 Right now the library is very sparse. In the near-ish future I hope to add more distributions and also CDFs for every distribution. In an effort to limit the bundle size though I don't envision the library getting huge. 
 
+If there is a particular feature that you would find largely beneficial don't hesitate to request it in an issue, or on my [twitter](twitter.com/nicholasstrayer). PR's are obviously awesome but if you don't feel comfortable with the codebase don't hesitate to ask. For instructions on how to actually make changes to the base code see the section __building__ below. 
 
 ## Real world examples
 
@@ -55,5 +56,3 @@ To build the library into the `dist/` folder run
 ```bash
 npm run build
 ```
-
-PR's are always welcome. 
