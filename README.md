@@ -26,6 +26,33 @@ console.log(someNormals)
 // > [5.733267780144279, 3.6284953605592105, 5.505710070640804, 7.340289876074601, 5.357392656344408, 7.772439732383019, 5.848394411674981, 4.508991919446658, 6.992326735630431, 4.177258305494865]
 ```
 
-## Realworld examples
+## Roadmap
+
+Right now the library is very sparse. In the near-ish future I hope to add more distributions and also CDFs for every distribution. In an effort to limit the bundle size though I don't envision the library getting huge. 
+
+
+## Real world examples
 
 This library was constructed after lots of personal projects needed the functions. To see an example of the functions being used extensiely, see my [blog post](http://livefreeordichotomize.com/2017/10/14/mcmc-and-the-case-of-the-spilled-seeds/) where I used `statdists` to implement an MCMC sampler directly with javascript. All raw code for the simulation is available at [this git repo](https://github.com/nstrayer/mcmcDemo). For example [here's](https://github.com/nstrayer/mcmcDemo/blob/master/src/setupLogPosterior.js) implementing a log posterior for a normal mixture distirbution. 
+
+## Building
+
+If you want to download the source and build the library yourself clone it and run `npm install`
+
+```bash
+git clone git@github.com:nstrayer/statdists.git
+npm install
+```
+
+To run jest tests (no build needed):
+```bash
+npm run test
+```
+
+To build the library into the `dist/` folder run
+
+```bash
+npm run build
+```
+
+PR's are always welcome. 
