@@ -1,11 +1,11 @@
 // @ts-check
 
-// Calculates the gamma function using the Anscoz approximation
 /**
+ * Calculates the gamma function using the Anscoz approximation
  * @param {number} x - Numeric vector
  * @return {number} - Result of gamma(x)
  */
-const gammaFunc = function(x) {
+function gammaFunc(x) {
   const p = [
     0.99999999999980993,
     676.5203681218851,
@@ -31,6 +31,6 @@ const gammaFunc = function(x) {
   }
 
   return Math.sqrt(2 * Math.PI) * Math.pow(t, x + 0.5) * Math.exp(-t) * a;
-};
+}
 
 module.exports = gammaFunc;
