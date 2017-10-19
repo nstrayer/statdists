@@ -41,6 +41,7 @@ If you want to download the source and build the library yourself clone it and r
 
 ```bash
 git clone git@github.com:nstrayer/statdists.git
+cd statdists/
 npm install
 ```
 
